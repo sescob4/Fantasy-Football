@@ -88,14 +88,14 @@ button:hover {
   background-color: #334155;
 }
 
-/* Overlay for Averages */
+/* Overlay for Averages (mobile safe) */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  padding: 20px 16px 40px 16px;
+  min-height: 100%;
+  padding: 60px 16px 40px 16px;
   background: rgba(255, 255, 255, 0.97);
   z-index: 1000;
   overflow-y: auto;
@@ -103,6 +103,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  overscroll-behavior: contain;
 }
 
 .overlay h2 {
