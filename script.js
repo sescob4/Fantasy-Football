@@ -1,7 +1,7 @@
 // Hardcoded player names
 const players = [
-  "Seabass", "Bob", "Charlie", "Diana", "Ethan",
-  "Fiona", "George", "Hannah", "Isaac", "Julia"
+  "Seabass", "Rory", "Gabe", "Tristin", "Luke",
+  "Nathan", "Henri", "Austin", "Hadi", "Truman"
 ];
 
 // Placeholder scores — all null (no data yet)
