@@ -15,22 +15,27 @@
     <button id="showAvgBtn" onclick="showAverages()">Show Player Averages</button>
   </div>
 
-  <!-- Event Charts Grid -->
-  <div class="grid-container" id="eventTables"></div>
+  <!-- Wrapper for alignment -->
+  <div class="center-wrapper">
+    <!-- Event Charts Grid -->
+    <div class="grid-container" id="eventTables"></div>
+  </div>
 
   <!-- Overlay for Averages -->
   <div id="averageOverlay" class="overlay hidden">
-    <h2>🏅 Player Rankings</h2>
-    <table id="averageScores">
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>Average Placement</th>
-        </tr>
-      </thead>
-      <tbody id="averagesBody"></tbody>
-    </table>
-    <button onclick="hideAverages()">Back to Events</button>
+    <div class="overlay-inner">
+      <h2>🏅 Player Rankings</h2>
+      <table id="averageScores">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Average Placement</th>
+          </tr>
+        </thead>
+        <tbody id="averagesBody"></tbody>
+      </table>
+      <button onclick="hideAverages()">Back to Events</button>
+    </div>
   </div>
 
   <script src="script.js"></script>

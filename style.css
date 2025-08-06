@@ -2,9 +2,10 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 30px;
+  padding: 30px 10px;
   background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
   color: #333;
+  overflow-x: hidden;
 }
 
 /* Page Title */
@@ -15,10 +16,10 @@ h1 {
   color: #1e293b;
 }
 
-/* Top Button Bar */
-.button-bar {
-  text-align: center;
-  margin-bottom: 30px;
+/* Center wrapper for grid */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 /* Grid Layout for Event Cards */
@@ -26,8 +27,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto 50px auto;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
 /* Event Card Style */
@@ -88,42 +90,48 @@ button:hover {
   background-color: #334155;
 }
 
-/* Overlay for Averages (mobile safe) */
+/* Button bar */
+.button-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Overlay full screen scrollable container */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100%;
-  padding: 60px 16px 40px 16px;
+  inset: 0;
   background: rgba(255, 255, 255, 0.97);
   z-index: 1000;
   overflow-y: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  overscroll-behavior: contain;
+  padding: 20px;
 }
 
-.overlay h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #1e293b;
+/* Overlay content inner card */
+.overlay-inner {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-/* Average score table styling */
+.overlay h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* Average score table */
 #averageScores {
   width: 100%;
-  max-width: 500px;
   border-collapse: collapse;
-  background: white;
-  border: 2px solid #cbd5e1;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 
 #averageScores th {
@@ -137,13 +145,6 @@ button:hover {
   text-align: center;
 }
 
-/* Back Button in Overlay */
-.overlay button {
-  margin-top: 30px;
-  max-width: 300px;
-  width: 100%;
-}
-
 /* Hidden Class */
 .hidden {
   display: none !important;
@@ -154,28 +155,27 @@ button:hover {
   background-color: #e0f2fe;
 }
 
-/* Mobile-Specific Overrides */
+/* Mobile tweaks */
 @media (max-width: 500px) {
   h1 {
     font-size: 1.8rem;
   }
 
   .overlay h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    font-size: 0.95rem;
+    width: 100%;
   }
 
   #averageScores td, #averageScores th {
-    padding: 8px;
     font-size: 0.9rem;
+    padding: 8px;
   }
 
-  .grid-container {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
+  .event-block h2 {
+    font-size: 1.1rem;
   }
 }
