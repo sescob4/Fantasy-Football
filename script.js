@@ -7,7 +7,7 @@ const players = [
 // Placeholder scores — all null (no data yet)
 const eventData = [
   { name: "100m Run", scores: Array(10).fill(null) },
-  { name: "800m Run", scores: [7, null, 4, 5, null, null, null, null, null, null] },
+  { name: "800m Run", scores: [7, 9, 4, 5, null, null, null, null, null, null] },
   { name: "Lacrosse Accuracy", scores: Array(10).fill(null) },
   { name: "Consective Pull Ups", scores: Array(10).fill(null) },
   { name: "Max Bench", scores: Array(10).fill(null) },
