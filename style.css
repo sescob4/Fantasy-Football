@@ -70,7 +70,7 @@ th {
   color: #ffffff;
 }
 
-/* Button */
+/* Button Style */
 button {
   display: inline-block;
   margin-top: 20px;
@@ -93,21 +93,23 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 60px 20px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 16px 40px 16px;
   background: rgba(255, 255, 255, 0.97);
   z-index: 1000;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .overlay h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #1e293b;
+  text-align: center;
 }
 
 /* Average score table styling */
@@ -137,6 +139,8 @@ button:hover {
 /* Back Button in Overlay */
 .overlay button {
   margin-top: 30px;
+  max-width: 300px;
+  width: 100%;
 }
 
 /* Hidden Class */
@@ -147,4 +151,30 @@ button:hover {
 .highlight {
   font-weight: bold;
   background-color: #e0f2fe;
+}
+
+/* Mobile-Specific Overrides */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  #averageScores td, #averageScores th {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
 }
