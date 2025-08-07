@@ -2,165 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NBA Starter Randomizer</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       text-align: center;
-      background: #f2f2f2;
+      background-color: #121212;
+      color: #ffffff;
       margin: 0;
       padding: 0;
     }
 
     h1 {
-      background-color: #222;
-      color: #fff;
-      margin: 0;
-      padding: 1rem;
+      margin-top: 20px;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 2rem auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    img {
-      max-width: 100%;
+    #playerImage {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 300px;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      margin-top: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     #playerName {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-top: 1rem;
+      font-size: 1.5em;
+      margin-top: 10px;
+      display: none;
     }
 
     .button-group {
+      margin-top: 20px;
       display: flex;
-      justify-content: center;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .top-buttons, .bottom-buttons {
+      display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-top: 1.5rem;
+      justify-content: center;
     }
 
     button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      padding: 12px 20px;
       border: none;
       border-radius: 8px;
-      background-color: #007bff;
+      background-color: #1e88e5;
       color: white;
+      font-size: 1em;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #1565c0;
     }
 
-    .bottom-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .counter {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #555;
+    #remainingCount {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #90caf9;
     }
 
     @media (max-width: 600px) {
-      .container {
-        margin: 1rem;
-        padding: 1rem;
+      #playerImage {
+        width: 90%;
       }
 
       button {
+        width: 100%;
+        max-width: 200px;
+      }
+
+      .button-group {
         width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <h1>NBA Starter Randomizer</h1>
 
-  <div class="container">
-    <div id="imageContainer"></div>
-    <div id="playerName"></div>
-    <div class="counter" id="remainingCounter"></div>
+  <h1>NBA Starter Colleges Randomizer</h1>
 
-    <div class="button-group">
+  <img id="playerImage" src="images/basketball.png" alt="Basketball Icon" />
+
+  <div id="playerName"></div>
+
+  <div id="remainingCount">150 players remaining</div>
+
+  <div class="button-group">
+    <div class="top-buttons">
       <button onclick="nextPlayer()">Next Player</button>
-      <button onclick="revealAnswer()">Reveal Answer</button>
+      <button onclick="revealAnswer()">Reveal</button>
     </div>
     <div class="bottom-buttons">
       <button onclick="goBack()">Back</button>
-      <button onclick="resetPlayers()">Reset</button>
+      <button onclick="reset()">Reset</button>
     </div>
   </div>
 
   <script>
-    let players = [];
-    let usedPlayers = [];
+    let allPlayers = [];
+    let remainingPlayers = [];
     let currentPlayer = null;
 
-    async function loadPlayers() {
-      const response = await fetch('full_nba_starters_with_images.json');
-      players = await response.json();
-      updateRemainingCounter();
-    }
+    // Load JSON data
+    fetch("full_nba_starters_with_images.json")
+      .then(res => res.json())
+      .then(data => {
+        allPlayers = [...data];
+        remainingPlayers = [...data];
+        updateRemainingCount();
+      });
 
     function nextPlayer() {
-      if (players.length === 0) {
-        alert('All players have been shown!');
+      if (remainingPlayers.length === 0) {
+        alert("All players have been shown. Click Reset to start over.");
         return;
       }
-      const index = Math.floor(Math.random() * players.length);
-      currentPlayer = players.splice(index, 1)[0];
-      usedPlayers.push(currentPlayer);
-      document.getElementById('imageContainer').innerHTML = '';
-      document.getElementById('playerName').textContent = '';
-      updateRemainingCounter();
+
+      const index = Math.floor(Math.random() * remainingPlayers.length);
+      currentPlayer = remainingPlayers.splice(index, 1)[0];
+      document.getElementById("playerImage").src = `images/${currentPlayer.image}`;
+      document.getElementById("playerName").textContent = currentPlayer.name;
+      document.getElementById("playerName").style.display = "none";
+      updateRemainingCount();
     }
 
     function revealAnswer() {
-      if (!currentPlayer) return;
-      const img = document.createElement('img');
-      img.src = `images/${currentPlayer.image}`;
-      img.alt = currentPlayer.name;
-      document.getElementById('imageContainer').innerHTML = '';
-      document.getElementById('imageContainer').appendChild(img);
-      document.getElementById('playerName').textContent = currentPlayer.name;
-    }
-
-    function resetPlayers() {
-      players = players.concat(usedPlayers);
-      usedPlayers = [];
-      currentPlayer = null;
-      document.getElementById('imageContainer').innerHTML = '';
-      document.getElementById('playerName').textContent = '';
-      updateRemainingCounter();
+      if (currentPlayer) {
+        document.getElementById("playerName").style.display = "block";
+      }
     }
 
     function goBack() {
-      window.location.href = 'index.html';
+      window.location.href = "index.html"; // change if your main file is different
     }
 
-    function updateRemainingCounter() {
-      document.getElementById('remainingCounter').textContent = `${players.length} players remaining`;
+    function reset() {
+      remainingPlayers = [...allPlayers];
+      currentPlayer = null;
+      document.getElementById("playerImage").src = "images/basketball.png";
+      document.getElementById("playerName").textContent = "";
+      document.getElementById("playerName").style.display = "none";
+      updateRemainingCount();
     }
 
-    loadPlayers();
+    function updateRemainingCount() {
+      document.getElementById("remainingCount").textContent =
+        `${remainingPlayers.length} players remaining`;
+    }
   </script>
+
 </body>
 </html>
