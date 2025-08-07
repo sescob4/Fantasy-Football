@@ -2,102 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NBA Starter Randomizer</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
+      background: linear-gradient(to bottom right, #202040, #602080);
+      color: #fff;
       margin: 0;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      color: #1e293b;
     }
 
     h1 {
-      margin-bottom: 30px;
-      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    img {
-      width: 300px;
-      height: auto;
+    #playerContainer {
+      background-color: #2e2e4d;
       border-radius: 12px;
-      margin: 20px auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
-    .player-name {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .college {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      color: #334155;
+    #playerImage {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     button {
-      margin: 15px;
-      padding: 12px 24px;
-      font-size: 1rem;
-      background-color: #1e293b;
-      color: white;
+      margin: 10px;
+      padding: 12px 20px;
       border: none;
       border-radius: 8px;
+      background-color: #ffa500;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.2s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     }
 
     button:hover {
-      background-color: #334155;
+      background-color: #ffcc00;
+    }
+
+    #remainingInfo {
+      margin-top: 20px;
+      background: #333355;
+      padding: 15px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    #remainingList {
+      max-height: 150px;
+      overflow-y: auto;
+      text-align: left;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        width: 90%;
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>🎯 NBA Starter Randomizer</h1>
+  <h1>NBA Starter Randomizer</h1>
 
-  <div id="playerDisplay">
-    <img id="playerImage" src="" alt="Player Image" />
-    <div class="player-name" id="playerName">Click below to randomize</div>
-    <div class="college" id="playerCollege" style="display: none;"></div>
+  <div id="playerContainer">
+    <img id="playerImage" src="" alt="NBA Starter" />
+    <h2 id="playerName"></h2>
+    <p id="playerCollege"></p>
   </div>
 
-  <button onclick="randomizePlayer()">🎲 Randomize Player</button>
-  <button onclick="revealCollege()">🎓 Reveal College</button>
-  <br />
-  <button onclick="goBack()">⬅ Back to Main Site</button>
+  <button onclick="getRandomPlayer()">Get Random Player</button>
+  <button onclick="resetRandomizer()">Reset</button>
+  <button onclick="window.location.href='index.html'">Back to Main</button>
+
+  <div id="remainingInfo">
+    <strong>Players Remaining:</strong> <span id="remainingCount"></span>
+    <ul id="remainingList"></ul>
+  </div>
 
   <script>
-    let players = [];
+    const players = [
+      { name: "Tyrese Maxey", college: "Kentucky", image: "Tyrese_Maxey.jpg" },
+      { name: "Damian Lillard", college: "Weber State", image: "Damian_Lillard.jpg" },
+      // ... include all other players here from the JSON file
+    ];
 
-    // Load JSON data on page load
-    fetch('full_nba_starters_with_images.json')
-      .then(response => response.json())
-      .then(data => {
-        players = data;
+    let originalPlayers = [...players];
+    let remainingPlayers = [...originalPlayers];
+
+    function updateRemainingDisplay() {
+      document.getElementById("remainingCount").innerText = remainingPlayers.length;
+      const list = document.getElementById("remainingList");
+      list.innerHTML = "";
+      remainingPlayers.forEach(player => {
+        const li = document.createElement("li");
+        li.textContent = player.name;
+        list.appendChild(li);
       });
-
-    function randomizePlayer() {
-      const index = Math.floor(Math.random() * players.length);
-      const player = players[index];
-
-      document.getElementById('playerImage').src = `images/${player.image}`;
-      document.getElementById('playerName').textContent = player.name;
-      document.getElementById('playerCollege').textContent = player.college;
-      document.getElementById('playerCollege').style.display = 'none';
     }
 
-    function revealCollege() {
-      document.getElementById('playerCollege').style.display = 'block';
+    function getRandomPlayer() {
+      if (remainingPlayers.length === 0) {
+        alert("All players have been shown! Please reset.");
+        return;
+      }
+      const index = Math.floor(Math.random() * remainingPlayers.length);
+      const player = remainingPlayers.splice(index, 1)[0];
+
+      document.getElementById("playerImage").src = `images/${player.image}`;
+      document.getElementById("playerName").innerText = player.name;
+      document.getElementById("playerCollege").innerText = player.college;
+
+      updateRemainingDisplay();
     }
 
-    function goBack() {
-      window.location.href = "index.html";
+    function resetRandomizer() {
+      remainingPlayers = [...originalPlayers];
+      document.getElementById("playerImage").src = "";
+      document.getElementById("playerName").innerText = "";
+      document.getElementById("playerCollege").innerText = "";
+      updateRemainingDisplay();
     }
+
+    window.onload = updateRemainingDisplay;
   </script>
 
 </body>
