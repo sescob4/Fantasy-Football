@@ -128,15 +128,19 @@
     let currentPlayer = null;
 
     async function loadPlayers() {
-      const res = await fetch('full_nba_starters_with_images.json');
-      players = await res.json();
-      resetPlayers();
+      try {
+        const res = await fetch('full_nba_starters_with_images.json');
+        players = await res.json();
+        resetPlayers();
+      } catch (error) {
+        console.error("Failed to load player data:", error);
+      }
     }
 
     function showNextPlayer() {
       if (remainingPlayers.length === 0) {
         document.getElementById("playerName").innerText = "All players shown!";
-        document.getElementById("playerImg").src = "images/basketball_icon.png";
+        document.getElementById("playerImg").src = "images/basketball.jpg";
         document.getElementById("collegeInfo").style.display = "none";
         return;
       }
@@ -148,6 +152,7 @@
       document.getElementById("playerName").innerText = currentPlayer.name;
       document.getElementById("collegeInfo").innerText = currentPlayer.college;
       document.getElementById("collegeInfo").style.display = "none";
+
       updateRemainingCount();
     }
 
@@ -160,9 +165,8 @@
     function resetPlayers() {
       remainingPlayers = [...players];
       currentPlayer = null;
-      document.getElementById("playerImg").src = "images/basketball_icon.png";
+      document.getElementById("playerImg").src = "images/basketball.jpg";
       document.getElementById("playerName").innerText = "Click Next to Begin";
-      document.getElementById("collegeInfo").innerText = "";
       document.getElementById("collegeInfo").style.display = "none";
       updateRemainingCount();
     }
