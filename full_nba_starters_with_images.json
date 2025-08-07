@@ -1,0 +1,752 @@
+[
+  {
+    "name": "Tyrese Maxey",
+    "college": "Kentucky",
+    "image": "tyrese_maxey.jpeg"
+  },
+  {
+    "name": "Damian Lillard",
+    "college": "Weber State",
+    "image": "damian_lillard.jpeg"
+  },
+  {
+    "name": "Lonzo Ball",
+    "college": "UCLA",
+    "image": "lonzo_ball.jpeg"
+  },
+  {
+    "name": "Darius Garland",
+    "college": "Vanderbilt",
+    "image": "darius_garland.jpeg"
+  },
+  {
+    "name": "Jrue Holiday",
+    "college": "UCLA",
+    "image": "jrue_holiday.jpeg"
+  },
+  {
+    "name": "Kris Dunn",
+    "college": "Providence",
+    "image": "kris_dunn.jpeg"
+  },
+  {
+    "name": "Quentin Grimes",
+    "college": "Houston",
+    "image": "quentin_grimes.jpeg"
+  },
+  {
+    "name": "Taurean Prince",
+    "college": "Baylor",
+    "image": "taurean_prince.jpeg"
+  },
+  {
+    "name": "Josh Giddey",
+    "college": "Australia",
+    "image": "josh_giddey.jpeg"
+  },
+  {
+    "name": "Donovan Mitchell",
+    "college": "Louisville",
+    "image": "donovan_mitchell.jpeg"
+  },
+  {
+    "name": "Derrick White",
+    "college": "Colorado",
+    "image": "derrick_white.jpeg"
+  },
+  {
+    "name": "James Harden",
+    "college": "Arizona State",
+    "image": "james_harden.jpeg"
+  },
+  {
+    "name": "Kelly Oubre Jr.",
+    "college": "Kansas",
+    "image": "kelly_jr.jpeg"
+  },
+  {
+    "name": "Kyle Kuzma",
+    "college": "Utah",
+    "image": "kyle_kuzma.jpeg"
+  },
+  {
+    "name": "Coby White",
+    "college": "UNC",
+    "image": "coby_white.jpeg"
+  },
+  {
+    "name": "Max Struss",
+    "college": "DePaul",
+    "image": "max_struss.jpeg"
+  },
+  {
+    "name": "Jaylen Brown",
+    "college": "Cal",
+    "image": "jaylen_brown.jpeg"
+  },
+  {
+    "name": "Norman Powell",
+    "college": "UCLA",
+    "image": "norman_powell.jpeg"
+  },
+  {
+    "name": "Paul George",
+    "college": "Fresno State",
+    "image": "paul_george.jpeg"
+  },
+  {
+    "name": "Giannis Antetokounmpo",
+    "college": "Greece",
+    "image": "giannis.jpeg"
+  },
+  {
+    "name": "Matas Buzelis",
+    "college": "G League (Lithuania)",
+    "image": "matas_buzelis.jpeg"
+  },
+  {
+    "name": "Evan Mobley",
+    "college": "USC",
+    "image": "evan_mobley.jpeg"
+  },
+  {
+    "name": "Jayson Tatum",
+    "college": "Duke",
+    "image": "jayson_tatum.jpeg"
+  },
+  {
+    "name": "Kawhi Leonard",
+    "college": "San Diego State",
+    "image": "kawhi_leonard.jpeg"
+  },
+  {
+    "name": "Guerschon Yabusele",
+    "college": "France",
+    "image": "guerschon_yabusele.jpeg"
+  },
+  {
+    "name": "Brook Lopez",
+    "college": "Stanford",
+    "image": "brook_lopez.jpeg"
+  },
+  {
+    "name": "Nikola Vucevic",
+    "college": "USC",
+    "image": "nikola_vucevic.jpeg"
+  },
+  {
+    "name": "Jarrett Allen",
+    "college": "Texas",
+    "image": "jarrett_allen.jpeg"
+  },
+  {
+    "name": "Kristaps Porzingis",
+    "college": "Latvia",
+    "image": "kristaps_porzingis.jpeg"
+  },
+  {
+    "name": "Ivica Zubac",
+    "college": "Croatia",
+    "image": "ivica_zubac.jpeg"
+  },
+  {
+    "name": "Ja Morant",
+    "college": "Murray State",
+    "image": "ja_morant.jpeg"
+  },
+  {
+    "name": "Trae Young",
+    "college": "Oklahoma",
+    "image": "trae_young.jpeg"
+  },
+  {
+    "name": "Davion Mitchell",
+    "college": "Baylor",
+    "image": "davion_mitchell.jpeg"
+  },
+  {
+    "name": "LaMelo Ball",
+    "college": "Lithuania/Australia",
+    "image": "lamelo_ball.jpeg"
+  },
+  {
+    "name": "Isaiah Collier",
+    "college": "USC",
+    "image": "isaiah_collier.jpeg"
+  },
+  {
+    "name": "Malik Monk",
+    "college": "Kentucky",
+    "image": "malik_monk.jpeg"
+  },
+  {
+    "name": "Desmond Bane",
+    "college": "TCU",
+    "image": "desmond_bane.jpeg"
+  },
+  {
+    "name": "Dyson Daniels",
+    "college": "Australia/G League",
+    "image": "dyson_daniels.jpeg"
+  },
+  {
+    "name": "Tyler Herro",
+    "college": "Kentucky",
+    "image": "tyler_herro.jpeg"
+  },
+  {
+    "name": "Josh Green",
+    "college": "Arizona",
+    "image": "josh_green.jpeg"
+  },
+  {
+    "name": "Collin Sexton",
+    "college": "Alabama",
+    "image": "collin_sexton.jpeg"
+  },
+  {
+    "name": "Zach LaVine",
+    "college": "UCLA",
+    "image": "zach_lavine.jpeg"
+  },
+  {
+    "name": "Jaylen Wells",
+    "college": "Washington State",
+    "image": "jaylen_wells.jpeg"
+  },
+  {
+    "name": "Zaccharie Risacher",
+    "college": "France",
+    "image": "zaccharie_risacher.jpeg"
+  },
+  {
+    "name": "Andrew Wiggins",
+    "college": "Kansas",
+    "image": "andrew_wiggins.jpeg"
+  },
+  {
+    "name": "Brandon Miller",
+    "college": "Alabama",
+    "image": "brandon_miller.jpeg"
+  },
+  {
+    "name": "John Collins",
+    "college": "Wake Forest",
+    "image": "john_collins.jpeg"
+  },
+  {
+    "name": "DeMar DeRozan",
+    "college": "USC",
+    "image": "demar_derozan.jpeg"
+  },
+  {
+    "name": "Jaren Jackson Jr",
+    "college": "Michigan State",
+    "image": "jaren_jr.jpeg"
+  },
+  {
+    "name": "Jalen Johnson",
+    "college": "Duke",
+    "image": "jalen_johnson.jpeg"
+  },
+  {
+    "name": "Bam Adebayo",
+    "college": "Kentucky",
+    "image": "bam_adebayo.jpeg"
+  },
+  {
+    "name": "Miles Bridges",
+    "college": "Michigan State",
+    "image": "miles_bridges.jpeg"
+  },
+  {
+    "name": "Lauri Markkanen",
+    "college": "Arizona",
+    "image": "lauri_markkanen.jpeg"
+  },
+  {
+    "name": "Keegan Murray",
+    "college": "Iowa",
+    "image": "keegan_murray.jpeg"
+  },
+  {
+    "name": "Zach Edey",
+    "college": "Purdue",
+    "image": "zach_edey.jpeg"
+  },
+  {
+    "name": "Onyeka Okongwu",
+    "college": "USC",
+    "image": "onyeka_okongwu.jpeg"
+  },
+  {
+    "name": "Kel'el Ware",
+    "college": "Indiana",
+    "image": "kelel_ware.jpeg"
+  },
+  {
+    "name": "Mark Williams",
+    "college": "Duke",
+    "image": "mark_williams.jpeg"
+  },
+  {
+    "name": "Walker Kessler",
+    "college": "Auburn",
+    "image": "walker_kessler.jpeg"
+  },
+  {
+    "name": "Domantas Sabonis",
+    "college": "Gonzaga",
+    "image": "domantas_sabonis.jpeg"
+  },
+  {
+    "name": "Jalen Brunson",
+    "college": "Villanova",
+    "image": "jalen_brunson.jpeg"
+  },
+  {
+    "name": "Luka Doncic",
+    "college": "Slovenia",
+    "image": "luka_doncic.jpeg"
+  },
+  {
+    "name": "Jalen Suggs",
+    "college": "Gonzaga",
+    "image": "jalen_suggs.jpeg"
+  },
+  {
+    "name": "Kyrie Irving",
+    "college": "Duke",
+    "image": "kyrie_irving.jpeg"
+  },
+  {
+    "name": "D'Angelo Russell",
+    "college": "Ohio State",
+    "image": "dangelo_russell.jpeg"
+  },
+  {
+    "name": "Jamal Murray",
+    "college": "Kentucky",
+    "image": "jamal_murray.jpeg"
+  },
+  {
+    "name": "Josh Hart",
+    "college": "Villanova",
+    "image": "josh_hart.jpeg"
+  },
+  {
+    "name": "Austin Reaves",
+    "college": "Oklahoma",
+    "image": "austin_reaves.jpeg"
+  },
+  {
+    "name": "K. Caldwell-Pope",
+    "college": "Georgia",
+    "image": "k_caldwellpope.jpeg"
+  },
+  {
+    "name": "Klay Thompson",
+    "college": "Washington State",
+    "image": "klay_thompson.jpeg"
+  },
+  {
+    "name": "Keon Johnson",
+    "college": "Tennessee",
+    "image": "keon_johnson.jpeg"
+  },
+  {
+    "name": "Christian Braun",
+    "college": "Kansas",
+    "image": "christian_braun.jpeg"
+  },
+  {
+    "name": "Mikal Bridges",
+    "college": "Villanova",
+    "image": "mikal_bridges.jpeg"
+  },
+  {
+    "name": "LeBron James",
+    "college": "St. Vincent - St. Mary's High School",
+    "image": "lebron_james.jpeg"
+  },
+  {
+    "name": "Franz Wagner",
+    "college": "Michigan",
+    "image": "franz_wagner.jpeg"
+  },
+  {
+    "name": "P.J. Washington",
+    "college": "Kentucky",
+    "image": "pj_washington.jpeg"
+  },
+  {
+    "name": "Ziaire Williams",
+    "college": "Stanford",
+    "image": "ziaire_williams.jpeg"
+  },
+  {
+    "name": "Michael Porter Jr.",
+    "college": "Missouri",
+    "image": "michael_jr.jpeg"
+  },
+  {
+    "name": "OG Anunoby",
+    "college": "Indiana",
+    "image": "og_anunoby.jpeg"
+  },
+  {
+    "name": "Rui Hachimura",
+    "college": "Gonzaga",
+    "image": "rui_hachimura.jpeg"
+  },
+  {
+    "name": "Paolo Banchero",
+    "college": "Duke",
+    "image": "paolo_banchero.jpeg"
+  },
+  {
+    "name": "Anthony Davis",
+    "college": "Kentucky",
+    "image": "anthony_davis.jpeg"
+  },
+  {
+    "name": "Cameron Johnson",
+    "college": "UNC",
+    "image": "cameron_johnson.jpeg"
+  },
+  {
+    "name": "Aaron Gordon",
+    "college": "Arizona",
+    "image": "aaron_gordon.jpeg"
+  },
+  {
+    "name": "Karl-Anthony Towns",
+    "college": "Kentucky",
+    "image": "karl-anthony_towns.jpeg"
+  },
+  {
+    "name": "Jaxson Hayes",
+    "college": "Texas",
+    "image": "jaxson_hayes.jpeg"
+  },
+  {
+    "name": "Wendell Carter Jr.",
+    "college": "Duke",
+    "image": "wendell_jr.jpeg"
+  },
+  {
+    "name": "Daniel Gafford",
+    "college": "Arkansas",
+    "image": "daniel_gafford.jpeg"
+  },
+  {
+    "name": "Nic Claxton",
+    "college": "Georgia",
+    "image": "nic_claxton.jpeg"
+  },
+  {
+    "name": "Nikola Jokic",
+    "college": "Serbia",
+    "image": "nikola_jokic.jpeg"
+  },
+  {
+    "name": "Tyrese Haliburton",
+    "college": "Iowa State",
+    "image": "tyrese_haliburton.jpeg"
+  },
+  {
+    "name": "C.J. McCollum",
+    "college": "Lehigh",
+    "image": "cj_mccollum.jpeg"
+  },
+  {
+    "name": "Cade Cunningham",
+    "college": "Oklahoma State",
+    "image": "cade_cunningham.jpeg"
+  },
+  {
+    "name": "Immanuel Quickley",
+    "college": "Kentucky",
+    "image": "immanuel_quickley.jpeg"
+  },
+  {
+    "name": "Fred VanVleet",
+    "college": "Wichita State",
+    "image": "fred_vanvleet.jpeg"
+  },
+  {
+    "name": "Chris Paul",
+    "college": "Wake Forest",
+    "image": "chris_paul.jpeg"
+  },
+  {
+    "name": "Andrew Nembhard",
+    "college": "Gonzaga",
+    "image": "andrew_nembhard.jpeg"
+  },
+  {
+    "name": "Dejounte Murray",
+    "college": "Washington",
+    "image": "dejounte_murray.jpeg"
+  },
+  {
+    "name": "Jaden Ivey",
+    "college": "Purdue",
+    "image": "jaden_ivey.jpeg"
+  },
+  {
+    "name": "RJ Barrett",
+    "college": "Duke",
+    "image": "rj_barrett.jpeg"
+  },
+  {
+    "name": "Jalen Green",
+    "college": "G League",
+    "image": "jalen_green.jpeg"
+  },
+  {
+    "name": "De'Aaron Fox",
+    "college": "Kentucky",
+    "image": "deaaron_fox.jpeg"
+  },
+  {
+    "name": "Aaron Nesmith",
+    "college": "Vanderbilt",
+    "image": "aaron_nesmith.jpeg"
+  },
+  {
+    "name": "Trey Murphy III",
+    "college": "Virginia",
+    "image": "trey_murphy.jpeg"
+  },
+  {
+    "name": "Tim Hardaway Jr",
+    "college": "Michigan",
+    "image": "tim_hardaway.jpeg"
+  },
+  {
+    "name": "Brandon Ingram",
+    "college": "Duke",
+    "image": "brandon_ingram.jpeg"
+  },
+  {
+    "name": "Dillon Brooks",
+    "college": "Oregon",
+    "image": "dillon_brooks.jpeg"
+  },
+  {
+    "name": "Devin Vassell",
+    "college": "Florida State",
+    "image": "devin_vassell.jpeg"
+  },
+  {
+    "name": "Pascal Siakam",
+    "college": "New Mexico State",
+    "image": "pascal_siakam.jpeg"
+  },
+  {
+    "name": "Zion Williamson",
+    "college": "Duke",
+    "image": "zion_williamson.jpeg"
+  },
+  {
+    "name": "Tobias Harris",
+    "college": "Tennessee",
+    "image": "tobias_harris.jpeg"
+  },
+  {
+    "name": "Scottie Barnes",
+    "college": "Florida State",
+    "image": "scottie_barnes.jpeg"
+  },
+  {
+    "name": "Amen Thompson",
+    "college": "Overtime Elite",
+    "image": "amen_thompson.jpeg"
+  },
+  {
+    "name": "Harrison Barnes",
+    "college": "UNC",
+    "image": "harrison_barnes.jpeg"
+  },
+  {
+    "name": "Myles Turner",
+    "college": "Texas",
+    "image": "myles_turner.jpeg"
+  },
+  {
+    "name": "Yves Missi",
+    "college": "Baylor",
+    "image": "yves_missi.jpeg"
+  },
+  {
+    "name": "Jalen Duren",
+    "college": "Memphis",
+    "image": "jalen_duren.jpeg"
+  },
+  {
+    "name": "Jakob Poeltl",
+    "college": "Utah",
+    "image": "jakob_poeltl.jpeg"
+  },
+  {
+    "name": "Alperen Sengun",
+    "college": "Turkey",
+    "image": "alperen_sengun.jpeg"
+  },
+  {
+    "name": "Victor Wembanyama",
+    "college": "France",
+    "image": "victor_wembanyama.jpeg"
+  },
+  {
+    "name": "Bradley Beal",
+    "college": "Florida",
+    "image": "bradley_beal.jpeg"
+  },
+  {
+    "name": "Shai Gildeous-Alexander",
+    "college": "Kentucky",
+    "image": "shai_gildeous-alexander.jpeg"
+  },
+  {
+    "name": "Mike Conley",
+    "college": "Ohio State",
+    "image": "mike_conley.jpeg"
+  },
+  {
+    "name": "Anfernee Simons",
+    "college": "IMG Academy (High School)",
+    "image": "anfernee_simons.jpeg"
+  },
+  {
+    "name": "Steph Curry",
+    "college": "Davidson",
+    "image": "steph_curry.jpeg"
+  },
+  {
+    "name": "Jordan Poole",
+    "college": "Michigan",
+    "image": "jordan_poole.jpeg"
+  },
+  {
+    "name": "Devin Booker",
+    "college": "Kentucky",
+    "image": "devin_booker.jpeg"
+  },
+  {
+    "name": "Jalen Williams",
+    "college": "Santa Clara",
+    "image": "jalen_williams.jpeg"
+  },
+  {
+    "name": "Anthony Edwards",
+    "college": "Georgia",
+    "image": "anthony_edwards.jpeg"
+  },
+  {
+    "name": "Deni Avdija",
+    "college": "Israel",
+    "image": "deni_avdija.jpeg"
+  },
+  {
+    "name": "Brandin Podziemski",
+    "college": "Santa Clara",
+    "image": "brandin_podziemski.jpeg"
+  },
+  {
+    "name": "Kyshawn George",
+    "college": "Miami",
+    "image": "kyshawn_george.jpeg"
+  },
+  {
+    "name": "Ryan Dunn",
+    "college": "Virginia",
+    "image": "ryan_dunn.jpeg"
+  },
+  {
+    "name": "Luguentz Dort",
+    "college": "Arizona State",
+    "image": "luguentz_dort.jpeg"
+  },
+  {
+    "name": "Jaden McDaniels",
+    "college": "Washington",
+    "image": "jaden_mcdaniels.jpeg"
+  },
+  {
+    "name": "Jerami Grant",
+    "college": "Syracuse",
+    "image": "jerami_grant.jpeg"
+  },
+  {
+    "name": "Moses Moody",
+    "college": "Arkansas",
+    "image": "moses_moody.jpeg"
+  },
+  {
+    "name": "Bilal Coulibaly",
+    "college": "France",
+    "image": "bilal_coulibaly.jpeg"
+  },
+  {
+    "name": "Kevin Durant",
+    "college": "Texas",
+    "image": "kevin_durant.jpeg"
+  },
+  {
+    "name": "Chet Holmgren",
+    "college": "Gonzaga",
+    "image": "chet_holmgren.jpeg"
+  },
+  {
+    "name": "Julius Randle",
+    "college": "Kentucky",
+    "image": "julius_randle.jpeg"
+  },
+  {
+    "name": "Toumani Camara",
+    "college": "Dayton",
+    "image": "toumani_camara.jpeg"
+  },
+  {
+    "name": "Jimmy Butler",
+    "college": "Marquette",
+    "image": "jimmy_butler.jpeg"
+  },
+  {
+    "name": "Khris Middleton",
+    "college": "Texas A&M",
+    "image": "khris_middleton.jpeg"
+  },
+  {
+    "name": "Nick Richards",
+    "college": "Kentucky",
+    "image": "nick_richards.jpeg"
+  },
+  {
+    "name": "Isaiah Hartenstein",
+    "college": "Germany/Lithuania",
+    "image": "isaiah_hartenstein.jpeg"
+  },
+  {
+    "name": "Rudy Gobert",
+    "college": "France",
+    "image": "rudy_gobert.jpeg"
+  },
+  {
+    "name": "Deandre Ayton",
+    "college": "Arizona",
+    "image": "deandre_ayton.jpeg"
+  },
+  {
+    "name": "Draymond Green",
+    "college": "Michigan State",
+    "image": "draymond_green.jpeg"
+  },
+  {
+    "name": "Alex Sarr",
+    "college": "France",
+    "image": "alex_sarr.jpeg"
+  }
+]

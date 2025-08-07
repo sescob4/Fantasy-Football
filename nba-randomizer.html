@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NBA Starter Randomizer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #1e293b;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .player-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .college {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #334155;
+    }
+
+    button {
+      margin: 15px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #1e293b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 NBA Starter Randomizer</h1>
+
+  <div id="playerDisplay">
+    <img id="playerImage" src="" alt="Player Image" />
+    <div class="player-name" id="playerName">Click below to randomize</div>
+    <div class="college" id="playerCollege" style="display: none;"></div>
+  </div>
+
+  <button onclick="randomizePlayer()">🎲 Randomize Player</button>
+  <button onclick="revealCollege()">🎓 Reveal College</button>
+  <br />
+  <button onclick="goBack()">⬅ Back to Main Site</button>
+
+  <script>
+    let players = [];
+
+    // Load JSON data on page load
+    fetch('full_nba_starters_with_images.json')
+      .then(response => response.json())
+      .then(data => {
+        players = data;
+      });
+
+    function randomizePlayer() {
+      const index = Math.floor(Math.random() * players.length);
+      const player = players[index];
+
+      document.getElementById('playerImage').src = `images/${player.image}`;
+      document.getElementById('playerName').textContent = player.name;
+      document.getElementById('playerCollege').textContent = player.college;
+      document.getElementById('playerCollege').style.display = 'none';
+    }
+
+    function revealCollege() {
+      document.getElementById('playerCollege').style.display = 'block';
+    }
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
