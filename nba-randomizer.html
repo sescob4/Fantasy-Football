@@ -7,8 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #202040, #602080);
-      color: #fff;
+      background: #f3f3f3;
       margin: 0;
       padding: 20px;
       display: flex;
@@ -19,132 +18,126 @@
 
     h1 {
       margin-bottom: 20px;
+      color: #222;
     }
 
-    #playerContainer {
-      background-color: #2e2e4d;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
-
-    #playerImage {
-      width: 100%;
-      max-height: 400px;
+    .player-image {
+      max-width: 90vw;
+      max-height: 60vh;
       object-fit: contain;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
     }
 
     button {
-      margin: 10px;
-      padding: 12px 20px;
+      padding: 10px 20px;
+      font-size: 16px;
       border: none;
       border-radius: 8px;
-      background-color: #ffa500;
-      color: #000;
-      font-weight: bold;
-      font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      background-color: #4a90e2;
+      color: white;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: #ffcc00;
+      background-color: #357ABD;
     }
 
-    #remainingInfo {
-      margin-top: 20px;
-      background: #333355;
-      padding: 15px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    #remainingList {
-      max-height: 150px;
-      overflow-y: auto;
-      text-align: left;
+    .answer {
       margin-top: 10px;
-      padding-left: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .remaining {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #666;
     }
 
     @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
       button {
-        width: 90%;
-        font-size: 15px;
+        font-size: 14px;
+        padding: 8px 16px;
       }
     }
   </style>
 </head>
 <body>
-
   <h1>NBA Starter Randomizer</h1>
+  <img id="playerImg" class="player-image" src="" alt="NBA Player" />
 
-  <div id="playerContainer">
-    <img id="playerImage" src="" alt="NBA Starter" />
-    <h2 id="playerName"></h2>
-    <p id="playerCollege"></p>
+  <div class="button-group">
+    <button onclick="revealAnswer()">Reveal Answer</button>
+    <button onclick="showRandomPlayer()">Next Player</button>
+    <button onclick="resetPlayers()">Reset</button>
+    <button onclick="goBack()">Back</button>
   </div>
 
-  <button onclick="getRandomPlayer()">Get Random Player</button>
-  <button onclick="resetRandomizer()">Reset</button>
-  <button onclick="window.location.href='index.html'">Back to Main</button>
-
-  <div id="remainingInfo">
-    <strong>Players Remaining:</strong> <span id="remainingCount"></span>
-    <ul id="remainingList"></ul>
-  </div>
+  <div class="answer" id="answer"></div>
+  <div class="remaining" id="remainingCount"></div>
 
   <script>
-    const players = [
-      { name: "Tyrese Maxey", college: "Kentucky", image: "Tyrese_Maxey.jpg" },
-      { name: "Damian Lillard", college: "Weber State", image: "Damian_Lillard.jpg" },
-      // ... include all other players here from the JSON file
-    ];
+    let players = [];
+    let remainingPlayers = [];
+    let currentPlayer = null;
 
-    let originalPlayers = [...players];
-    let remainingPlayers = [...originalPlayers];
-
-    function updateRemainingDisplay() {
-      document.getElementById("remainingCount").innerText = remainingPlayers.length;
-      const list = document.getElementById("remainingList");
-      list.innerHTML = "";
-      remainingPlayers.forEach(player => {
-        const li = document.createElement("li");
-        li.textContent = player.name;
-        list.appendChild(li);
-      });
+    async function fetchData() {
+      const response = await fetch('full_nba_starters_with_images.json');
+      players = await response.json();
+      resetPlayers();
     }
 
-    function getRandomPlayer() {
+    function showRandomPlayer() {
       if (remainingPlayers.length === 0) {
-        alert("All players have been shown! Please reset.");
+        document.getElementById('playerImg').src = '';
+        document.getElementById('answer').innerText = 'All players shown!';
         return;
       }
       const index = Math.floor(Math.random() * remainingPlayers.length);
-      const player = remainingPlayers.splice(index, 1)[0];
-
-      document.getElementById("playerImage").src = `images/${player.image}`;
-      document.getElementById("playerName").innerText = player.name;
-      document.getElementById("playerCollege").innerText = player.college;
-
-      updateRemainingDisplay();
+      currentPlayer = remainingPlayers.splice(index, 1)[0];
+      document.getElementById('playerImg').src = `images/${currentPlayer.image}`;
+      document.getElementById('answer').innerText = '';
+      updateRemainingCount();
     }
 
-    function resetRandomizer() {
-      remainingPlayers = [...originalPlayers];
-      document.getElementById("playerImage").src = "";
-      document.getElementById("playerName").innerText = "";
-      document.getElementById("playerCollege").innerText = "";
-      updateRemainingDisplay();
+    function revealAnswer() {
+      if (currentPlayer) {
+        document.getElementById('answer').innerText = `${currentPlayer.name} — ${currentPlayer.college}`;
+      }
     }
 
-    window.onload = updateRemainingDisplay;
+    function resetPlayers() {
+      remainingPlayers = [...players];
+      currentPlayer = null;
+      document.getElementById('playerImg').src = '';
+      document.getElementById('answer').innerText = '';
+      updateRemainingCount();
+    }
+
+    function updateRemainingCount() {
+      document.getElementById('remainingCount').innerText = `Players Remaining: ${remainingPlayers.length}`;
+    }
+
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+
+    fetchData();
   </script>
-
 </body>
 </html>
