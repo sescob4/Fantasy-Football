@@ -6,7 +6,7 @@ const players = [
 
 const eventData = [
   { name: "100m Run", scores: [5, 4, 3, 7, 6, 2, 1, 10, 9, 8] },
-  { name: "800m Run", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "800m Run", scores: [4, 9, 7, 3, 6, 1, 2, 10, 8, 5] },
   { name: "Lacrosse Accuracy", scores: [6, 9, 1, 8, 5, 4, 2, 10, 3, 7] },
   { name: "Consective Pull Ups", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "Max Bench", scores: [null, null, null, null, null, null, null, 10, null, null] },
