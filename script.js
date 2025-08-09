@@ -8,7 +8,7 @@ const eventData = [
   { name: "100m Run", scores: [5, 4, 3, 7, 6, 2, 1, 10, 9, 8] },
   { name: "800m Run", scores: [4, 9, 7, 3, 6, 1, 2, 10, 8, 5] },
   { name: "Lacrosse Accuracy", scores: [6, 9, 1, 8, 5, 4, 2, 10, 3, 7] },
-  { name: "Consective Pull Ups", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Consective Pull Ups", scores: [9, 2, 4, 6, 8, 7, 1, 10, 5, 3] },
   { name: "Max Bench", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "Soccer Cross Bar", scores: [4, 1, 9, 6, 8, 7, 3, 10, 5, 2] },
   { name: "Mario Kart Time Trial", scores: [null, null, null, null, null, null, null, 10, null, null] },
