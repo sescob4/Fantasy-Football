@@ -4,18 +4,17 @@ const players = [
   "Nathan", "Henri", "Austin", "Hadi", "Truman"
 ];
 
-// Placeholder scores — all null (no data yet)
 const eventData = [
-  { name: "100m Run", scores: Array(10).fill(null) },
-  { name: "800m Run", scores: [7, 9, 4, 5, 8, 2, null, null, null, null] },
-  { name: "Lacrosse Accuracy", scores: Array(10).fill(null) },
-  { name: "Consective Pull Ups", scores: Array(10).fill(null) },
-  { name: "Max Bench", scores: Array(10).fill(null) },
-  { name: "Soccer Accuracy", scores: Array(10).fill(null) },
-  { name: "Mario Kart Time Trial", scores: Array(10).fill(null) },
-  { name: "Pokemon Naming", scores: Array(10).fill(null) },
-  { name: "NBA Starter Colleges", scores: Array(10).fill(null) },
-  { name: "Beer Drinking", scores: Array(10).fill(null) }
+  { name: "100m Run", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "800m Run", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Lacrosse Accuracy", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Consective Pull Ups", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Max Bench", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Soccer Accuracy", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Mario Kart Time Trial", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Pokemon Naming", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "NBA Starter Colleges", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Beer Drinking", scores: [null, null, null, null, null, null, null, 10, null, null] }
 ];
 
 // Generate all event tables
