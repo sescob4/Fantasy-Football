@@ -10,7 +10,7 @@ const eventData = [
   { name: "Lacrosse Accuracy", scores: [6, 9, 1, 8, 5, 4, 2, 10, 3, 7] },
   { name: "Consective Pull Ups", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "Max Bench", scores: [null, null, null, null, null, null, null, 10, null, null] },
-  { name: "Soccer Accuracy", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Soccer Cross Bar", scores: [4, 1, 9, 6, 8, 7, 3, 10, 5, 2] },
   { name: "Mario Kart Time Trial", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "Pokemon Naming", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "NBA Starter Colleges", scores: [null, null, null, null, null, null, null, 10, null, null] },
