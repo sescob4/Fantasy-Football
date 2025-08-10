@@ -14,7 +14,7 @@ const eventData = [
   { name: "Mario Kart Time Trial", scores: [3, 6, 7, 1, 8, 2, 9, 10, 5, 4] },
   { name: "Pokemon Naming", scores: [1.5, 6, 7, 1.5, 3, 4, 9, 10, 8, 5] },
   { name: "NBA Starter Colleges", scores: [2.5, 8, 7, 2.5, 2.5, 2.5, 5, 10, 6, 9] },
-  { name: "Beer Drinking", scores: [10, null, null, null, null, null, null, 9, null, null] }
+  { name: "Beer Drinking", scores: [9, 10, 6, 1, 3, 7, 5, 8, 2, 4] }
 ];
 
 // Generate all event tables
