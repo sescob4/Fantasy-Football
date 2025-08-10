@@ -11,7 +11,7 @@ const eventData = [
   { name: "Consective Pull Ups", scores: [9, 2, 4, 6, 8, 7, 1, 10, 5, 3] },
   { name: "Max Bench", scores: [8, 7, 2, 6, 5, 9, 4, 10, 1, 3] },
   { name: "Soccer Cross Bar", scores: [4, 1, 9, 6, 8, 7, 3, 10, 5, 2] },
-  { name: "Mario Kart Time Trial", scores: [null, null, null, null, null, null, null, 10, null, null] },
+  { name: "Mario Kart Time Trial", scores: [3, 6, 7, 1, 8, 2, 9, 10, 5, 4] },
   { name: "Pokemon Naming", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "NBA Starter Colleges", scores: [null, null, null, null, null, null, null, 10, null, null] },
   { name: "Beer Drinking", scores: [10, null, null, null, null, null, null, 9, null, null] }
